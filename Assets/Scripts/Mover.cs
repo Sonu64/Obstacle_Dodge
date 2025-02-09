@@ -13,7 +13,7 @@ public class Mover : MonoBehaviour
     void Update() 
     {
         float moveX = Input.GetAxis("Horizontal"); // changed through controls
-        float moveY = 0.34f;
+        float moveY = 0.34f; // changed for github desktop demo
         float moveZ = Input.GetAxis("Vertical");
 
         transform.Translate(moveX, moveY, moveZ);

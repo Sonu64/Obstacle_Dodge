@@ -1,10 +1,7 @@
 using UnityEngine;
-
 public class Mover : MonoBehaviour
 {
-
     [SerializeField] float moveSpeed = 2.0f;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() 
     {
@@ -15,7 +12,7 @@ public class Mover : MonoBehaviour
     void Update() 
     {
         /*
-         The Horizontal and Vertical issue continues wo, Faced this issue before.
+         The Horizontal and Vertical issue continues don't know why, Faced this issue before.
          */
         float moveX = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime; 
         float moveY = 0f; // changed for github desktop demo

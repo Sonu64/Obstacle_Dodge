@@ -15,11 +15,11 @@ public class Mover : MonoBehaviour
     void Update() 
     {
         /*
-         The Horizontal and Vertical issue continues with the keys, Faced this issue before.
+         The Horizontal and Vertical issue continues wo, Faced this issue before.
          */
-        float moveX = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime; 
+        float moveX = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime; 
         float moveY = 0f; // changed for github desktop demo
-        float moveZ = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
+        float moveZ = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
 
         transform.Translate(moveX, moveY, moveZ);
         //transform.Translate(-moveX, -moveY, -moveZ);

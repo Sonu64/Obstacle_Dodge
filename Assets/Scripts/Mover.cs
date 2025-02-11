@@ -14,9 +14,12 @@ public class Mover : MonoBehaviour
     // Update is called once per frame
     void Update() 
     {
-        float moveX = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime; // changed through controls
+        /*
+         The Horizontal and Vertical issue continues with the keys, Faced this issue before.
+         */
+        float moveX = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime; 
         float moveY = 0f; // changed for github desktop demo
-        float moveZ = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
+        float moveZ = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
 
         transform.Translate(moveX, moveY, moveZ);
         //transform.Translate(-moveX, -moveY, -moveZ);

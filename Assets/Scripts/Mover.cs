@@ -16,9 +16,9 @@ public class Mover : MonoBehaviour
 
     void PrintInsructions()
     {
-        Debug.Log("Welcome to Obstacle Dodger");
-        Debug.Log("Avoid obstacles to win the game !");
-        Debug.Log("Good Luck with your Ducky !");
+        //Debug.Log("Welcome to Obstacle Dodger");
+        //Debug.Log("Avoid obstacles to win the game !");
+        //Debug.Log("Good Luck with your Ducky !");
     }
 
     void MovePlayer()

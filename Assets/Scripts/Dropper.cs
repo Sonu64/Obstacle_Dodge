@@ -1,24 +1,22 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
-{
+public class NewMonoBehaviourScript : MonoBehaviour {
 
     [SerializeField] float delay = 5.0f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
+    //Caching References for current object
+    Rigidbody myRigidBody;
+    MeshRenderer myMeshRenderer;
+    
+    void Start() {
+        myRigidBody = GetComponent<Rigidbody>();
+        myMeshRenderer = myRigidBody.GetComponent<MeshRenderer>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        Debug.Log(Time.time);
-        if (Time.time > delay)
-        {
-
-            GetComponent<Rigidbody>().useGravity = true;  
+    void Update() {
+        if (Time.time > delay) {
+            myRigidBody.useGravity = true;
+            myMeshRenderer.enabled = true;
         }
     }
 }

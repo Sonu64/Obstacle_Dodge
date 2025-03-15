@@ -27,7 +27,7 @@ public class Mover : MonoBehaviour
          The Horizontal and Vertical issue continues don't know why, Faced this issue before.
          */
         float moveX = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime; 
-        float moveY = 0f; // changed for github desktop demo
+        float moveY = 0f; // We don't need upwards or downwards movement
         float moveZ = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
 
         transform.Translate(moveX, moveY, moveZ);

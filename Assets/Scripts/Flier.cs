@@ -24,6 +24,16 @@ public class Flier : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         /** Working with Ducky's body only !! WHY ? **/
+
+        /**
+         * the reason we need to specify Vector3 before MoveTowards is because MoveTowards is 
+         * a static method of the Vector3 struct. There isn't a standalone MoveTowards() function
+         * —it's specifically part of Vector3 (or Vector2 for 2D).
+         * 
+        **/
+
+        // We are not following Player, when we reach playerPosition we stop. This is because
+        // playerPosition is initialized in Start()
         transform.position = 
             Vector3.MoveTowards(transform.position, playerPosition, flySpeed * Time.deltaTime);
     }

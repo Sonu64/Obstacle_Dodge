@@ -24,7 +24,12 @@ public class Flier : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         /** Working with Ducky's body only !! WHY ? **/
+        GoToPlayer();
+        DestroyWhenReached();
+    }
 
+
+    void GoToPlayer() { 
         /**
          * the reason we need to specify Vector3 before MoveTowards is because MoveTowards is 
          * a static method of the Vector3 struct. There isn't a standalone MoveTowards() function
@@ -36,5 +41,10 @@ public class Flier : MonoBehaviour {
         // playerPosition is initialized in Start()
         transform.position = 
             Vector3.MoveTowards(transform.position, playerPosition, flySpeed * Time.deltaTime);
+    }
+
+    void DestroyWhenReached() {
+        if (transform.position == playerPosition)
+            Destroy(gameObject);
     }
 }

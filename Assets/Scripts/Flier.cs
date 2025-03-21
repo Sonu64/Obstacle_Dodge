@@ -21,7 +21,6 @@ public class Flier : MonoBehaviour {
         playerPosition = player.transform.position;
     }
 
-    // Update is called once per frame
     void Update() {
         /** Working with Ducky's body only !! WHY ? **/
         GoToPlayer();

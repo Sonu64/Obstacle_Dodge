@@ -3,19 +3,16 @@ public class Mover : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 2.0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start() 
-    {
+    void Start() {
         PrintInsructions();
     }
 
     // Update is called once per frame
-    void Update() 
-    {
+    void Update() {
         MovePlayer();
     }
 
-    void PrintInsructions()
-    {
+    void PrintInsructions() {
         //Debug.Log("Welcome to Obstacle Dodger");
         //Debug.Log("Avoid obstacles to win the game !");
         //Debug.Log("Good Luck with your Ducky !");
